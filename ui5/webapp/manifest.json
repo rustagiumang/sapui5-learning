@@ -1,0 +1,99 @@
+{
+  "_version": "1.81.0",
+  "sap.app": {
+    "id": "com.umang.ui5",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.20.1",
+      "toolsId": "c0373c56-c85f-4e58-a863-f35fe0a6ad50"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }, 
+    "fullWidth": true
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.144.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.umang.ui5.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.umang.ui5.view",
+        "async": true,
+        "viewPath": "com.umang.ui5.view"
+      },
+      "routes": [
+        {
+          "name": "RoutefreestyleViewA",
+          "pattern": ":?query:",
+          "target": [
+            "TargetfreestyleViewA"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetfreestyleViewA": {
+          "id": "freestyleViewA",
+          "name": "freestyleViewA"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.umang.ui5.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
