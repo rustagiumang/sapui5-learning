@@ -382,8 +382,6 @@ sap.ui.define([
                 }
             })
             oDialog.open();  
-
-
         }
     });
 });
